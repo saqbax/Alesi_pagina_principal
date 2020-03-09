@@ -30,12 +30,12 @@ $destinatario = "contacto@alesi.org.mx";
 $nomc= $nombre. " ".$asunto;
 
 
-// Datos de la cuenta de correo utilizada para enviar vía SMTP
+// Datos de la cuenta de correo utilizada para enviar vï¿½a SMTP
 $smtpHost = "mail.alesi.org.mx";  // Dominio alternativo brindado en el email de alta 
 //$smtpUsuario = "contacto@alesi.org.mx";  // Mi cuenta de correo
 $smtpUsuario = "webmaster@alesi.org.mx";  // Mi cuenta de correo
-//$smtpClave = "alesi.org.mx";  // Mi contraseña
-$smtpClave = "webmaster123";  // Mi contraseña
+//$smtpClave = "alesi.org.mx";  // Mi contraseï¿½a
+$smtpClave = "webmaster123";  // Mi contraseï¿½a
 
 
 
@@ -53,9 +53,9 @@ $mail->Username = $smtpUsuario;
 $mail->Password = $smtpClave;
 
 
-$mail->From = $email; // Email desde donde envío el correo.
+$mail->From = $email; // Email desde donde envï¿½o el correo.
 $mail->FromName = $nomc;
-$mail->AddAddress($destinatario); // Esta es la dirección a donde enviamos los datos del formulario
+$mail->AddAddress($destinatario); // Esta es la direcciï¿½n a donde enviamos los datos del formulario
 
 $mail->Subject = "Formulario desde el Sitio Web"; // Este es el titulo del email.
 $mensajeHtml = nl2br($mensaje);
@@ -94,6 +94,8 @@ $mail->SMTPOptions = array(
 );
 
 $estadoEnvio = $mail->Send(); 
+
+
 if($estadoEnvio){
    echo"<script>
  
